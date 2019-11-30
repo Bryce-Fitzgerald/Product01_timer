@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context="com.example.timer03.TimerActivity">
+
+    <com.example.timer03.view.CircleView
+        android:id="@+id/circle_view"
+        android:layout_centerHorizontal="true"
+        android:layout_width="260dp"
+        android:layout_height="260dp"
+        app:centerX="130dp"
+        app:centerY="130dp"
+        app:circleWidth="5dp"
+        app:radius="120dp"
+        app:pointRadius="8dp"
+        app:angle="0"
+        app:backgroundColor="#afaba2"
+        app:circleColor="#6e11c6"
+        app:pointColor="#ea2470"
+        />
+
+    <com.example.timer03.view.TimeView
+        android:id="@+id/time_view"
+        android:layout_width="260dp"
+        android:layout_height="260dp"
+        android:layout_centerHorizontal="true"
+        />
+
+    <TextView
+        android:id="@+id/countRoundRecords_text_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/time_view"
+        android:textAlignment="center"
+        />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_below="@+id/countRoundRecords_text_view"
+        android:layout_above="@+id/pauseOrContinue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+
+
+    <Button
+        android:id="@+id/pauseOrContinue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/start"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        />
+
+    <Button
+        android:id="@+id/countRoundOrStop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_toLeftOf="@+id/pauseOrContinue"
+        android:text="@string/stop"
+        />
+
+</RelativeLayout>

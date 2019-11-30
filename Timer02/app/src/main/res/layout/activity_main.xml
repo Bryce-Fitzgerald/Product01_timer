@@ -29,6 +29,12 @@
         android:layout_height="wrap_content"
         android:text="停止"
         />
+    <Button
+        android:id="@+id/bu_wait"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="暂停"
+        />
 
 
 </LinearLayout>
